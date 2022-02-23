@@ -1,2 +1,2 @@
-# ParcingShmarsing-LUbot-
+# ParcingShmarsing-LUbot
 Telegram bot for parcing 
