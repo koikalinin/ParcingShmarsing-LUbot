@@ -42,7 +42,7 @@ dispatcher.add_handler(links_handler)
 
 def gettext(update, context):
     #creates keybord and sends data to query when user clicks on button
-    #user choses a link from keyboard and gets parsed data
+    
     chat_id = update.effective_chat.id
     print(f'/text command from {chat_id}')
     keyboard = [
@@ -65,9 +65,8 @@ dispatcher.add_handler(text_handler)
 
 def button(update: Update, context: CallbackContext) -> None:
     #updates query info from pressed buttons and sends a respond
+    
     query = update.callback_query
-
-
     query.answer()
     query.edit_message_text(text=f"You chose: {query.data}")
     query.edit_message_text(text=showtext(result[int(query.data)-1]))
